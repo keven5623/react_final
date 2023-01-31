@@ -1,0 +1,20 @@
+.login-content {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-background {
+  z-index: -1;
+  position: absolute;
+  background-image: url("../../assets/imgs/ss.PNG");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=index.css.map */

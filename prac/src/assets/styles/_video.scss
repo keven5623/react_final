@@ -1,0 +1,283 @@
+.allV {
+  overflow-x: hidden;
+  .videoContainer {
+    position: relative;
+    top: 88px;
+    background-color: #9d9faa;
+    display: flex;
+    width: 100vw;
+    height: 76.76vh;
+    overflow: hidden;
+    .video {
+      display: block;
+      // margin: auto;
+      width: 77.24%;
+      align-items: center;  
+      justify-items: center;
+      position: relative;
+      &:hover{
+        .hover{
+          transform: translateY(0);
+        }
+        .progress {
+          height: 20px;
+        }
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        &::-webkit-media-controls {display: none;}
+        }
+      }
+      button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+      }
+      .videoControlBar{
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        // transform: translateY(100%) translateY(-5px);
+        transition: all .3s;
+        flex-wrap: wrap;
+        background: rgba(0,0,0,0.1);
+        .progress {
+          flex: 10;
+          position: relative;
+          display: flex;
+          flex-basis: 100%;
+          height: 5px;
+          transition: height 0.3s;
+          background: rgba(255,255,255,0.5);
+          cursor: ew-resize;
+          .progressFilled {
+            // width: 50%;
+            background: $yellow;
+            flex: 0;
+            // flex-basis: 0%;
+          }
+        }
+        .videoBtnContainer{
+          margin: 0 0.2rem;
+          padding: 0.5rem;
+          // display: flex;
+        }
+        .voiceBtn{
+          margin-right: auto;
+          display: flex;
+          .voiceBar{
+            flex: 10;
+            position: relative;
+            display: flex;
+            flex-basis: 100%;
+            width: 100px;
+            height: 35px;
+            transition: height 0.3s;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 1rem;
+            .voiceFill{
+            background: $yellow;
+            flex: 0;
+            flex-basis: 100%;
+            }
+          }
+        } 
+        .videoSpeed{
+          background-color: white;
+          width: 82px;
+          height: 35px;
+          display: flex;
+          position: relative;
+          font-weight: 700;
+          button{
+            width: 100%;
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          .videoSpeedList{
+            background-color: $primaryLightest;
+            height: 215px;
+            // padding: 0 1rem;
+            position:absolute;
+            z-index: 1000;
+            // right: 1000;
+            bottom: 100%;
+            margin-bottom: 3rem;
+            display: none;
+            ul{
+              list-style-type: none;
+              
+              font-size: 1.3rem;
+              // width: fit-content;
+
+            }
+            li{
+              padding: 0.2rem 0;
+              width: 82px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center; 
+              &:hover{
+                background-color: $primaryLightestest;
+              }
+            }
+          }
+
+          
+        }  
+        .fullScreenBtn{
+          margin: 0 0 0 2rem;
+        }
+
+      }
+    }
+
+    .classListContainer {
+      display: block;
+      background-color: $primaryLightest;
+      color: $primaryLightestest;
+      width: 21.8%;
+      font-size: 22px;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      
+      .classListHead{
+        height: 12.5%;
+        display: flex;
+        align-items: center;
+        margin-left: 19.22%;
+      }
+      .classListChapter{
+        display: flex;
+        height: 12.5%;
+        outline: 1px solid $primaryLightestest;
+        
+        
+        .expandSvg{
+          width: 19.22%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .classListChapterTag{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+      }
+    }
+  }
+
+  .infoContainer {
+    width: 83.33333%;
+    margin: 12vh auto;
+
+    .infoHead {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 40px;
+      position: relative;
+      // margin-top: 102px;
+      
+      .infoHeadTitle {
+        display: inline-block;
+        font-weight: 700;
+        color: $blueDarker;
+
+
+      }
+
+      .infoHeadPrice {
+        font-size: 32px;
+        font-weight: 700;
+        color: $red;
+        margin-left: auto;
+        padding: 0 6.5px 0 0;
+      }
+
+      button {
+        height: 48px;
+        border-radius: 24px;
+        margin: 0 7.5px;
+        padding: 13px;
+        border: none;
+        padding: 1px 24px;
+        position: relative;
+        cursor: pointer;
+
+
+        span {
+          color: $white;
+          font-size: 18px;
+          align-content: center;
+        }
+      }
+
+      .infoHeadShopCart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          background-color: $blueDarker;
+        }
+      }
+
+      .infoHeadBuyNow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          background-color: $red;
+        }
+      }
+    }
+
+    .containerLine {
+      height: 6px;
+      background-color: $red;
+      margin-top: 6px;
+    }
+
+    .infoBtn {
+      margin-top: 5vh;
+      border-bottom: solid $primaryLightest;
+      width: 74%;
+      display: flex;
+
+      div {
+        display: flex;
+        width: 50%;
+      }
+
+      button {
+        display: flex;
+        color: $blueDarker;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        span {
+          font-size: 32px;
+        }
+      }
+      button:focus {
+        box-shadow: 0 3px 0 $red;
+      }
+    }
+
+  }
+
+
+
+

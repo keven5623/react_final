@@ -1,0 +1,77 @@
+.head4 {
+  background-color: $primaryLighter;
+  width: 100%;
+  height: 1048px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    display: inline-block;
+    padding-top: 124px;
+    color: $white;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: 0.15em;
+    border-bottom: solid 6px $red;
+    span {
+      color: $blue;
+    }
+  }
+  h3 {
+    padding-top: 24px;
+    color: $white;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 54px;
+    letter-spacing: 0.15em;
+  }
+  .feedBackRow1 {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .feedBackRow1,
+  .feedBackRow2 {
+    width: 81vw;
+    display: flex;
+    justify-content: space-between;
+    .feedBack1,
+    .feedBack2,
+    .feedBack3,
+    .feedBack4 {
+      width: calc(39.6vw - 80px);
+      height: 206px;
+      background-color: $primary;
+      cursor: url(../imgs/feedBackCursor.svg) 32 32, auto;
+      padding: 40px;
+      transition: 0s;
+      p {
+        height: 116px;
+        padding-top: 18px;
+        color: $primaryLightest;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+        letter-spacing: 0.15em;
+      }
+      .feedBackAuthorBox {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        h6 {
+          color: $primaryLightestest;
+          font-weight: 400;
+          font-size: 18px;
+          letter-spacing: 0.05em;
+          padding: 0 0 4px 12px;
+        }
+      }
+      &:hover {
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.header {
+  height: 80px;
+  background-color: black;
+}
+.header .header-top {
+  height: 40px;
+  text-align: end;
+  line-height: 40px;
+  padding-right: 20px;
+}
+.header .header-top span {
+  margin-right: 10px;
+}
+.header .header-top .ant-dropdown-link img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 80%;
+  margin-right: 40px;
+  margin-top: 5px;
+}
+.header .header-bottom {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header .header-bottom .header-bottom-left {
+  position: relative;
+  width: 25%;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+.header .header-bottom .header-bottom-left::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 100%;
+  transform: translateX(50%);
+  border-top: 20px solid black;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+}
+.header .header-bottom .header-bottom-right {
+  width: 75%;
+  text-align: end;
+  margin-right: 30px;
+}
+.header .header-bottom .header-bottom-right span {
+  margin: 0 5px;
+}/*# sourceMappingURL=index.css.map */

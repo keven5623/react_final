@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "interRegular";
+  src: url(./font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "interBold";
+  src: url(./font/Inter-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "intreRegular", "Noto Sans TC", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  background-color: #1d1f27;
+}
+
+.headerss {
+  height: 50px;
+}
+
+.dCartContainer {
+  width: 70%;
+  padding-left: 70px;
+}
+.dCartContainer .cartcompos {
+  display: flex;
+  flex-direction: row;
+}
+.dCartContainer .dcartPageTitle {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.dCartContainer .dcartPageTitle .dCartTitle {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 5px 0;
+  border-bottom: 6px solid #e23965;
+  line-height: 48px;
+  letter-spacing: 0.15em;
+  color: #4967ff;
+}
+.dCartContainer .dcartPageTitle .dCartTitle span svg path {
+  fill: #aa003b;
+}
+
+.dCartList li {
+  margin: 5px 0;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+}
+.dCartList li input {
+  margin: 30px;
+  width: 20px;
+}
+.dCartList li img {
+  width: auto;
+  max-height: 90px;
+  padding: auto;
+}
+.dCartList li .dTrash {
+  padding: 0 30px;
+  float: right;
+  width: 50px;
+}
+.dCartList li .dTrash svg path {
+  fill: #aa003b;
+}
+.dCartList li .dTrash svg path:hover {
+  fill: #e23965;
+}
+.dCartList li .dCartitem .dCartTiltle {
+  padding: 20px 15px 0 15px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0.1em;
+  color: #4967ff;
+  transition: all 0.3s;
+}
+.dCartList li .dCartitem .dCartTiltle:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.dCartList li .dCartitem .dCartTeacher {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  padding-left: 15px;
+}
+.dCartList li .dOldPrice {
+  width: 150px;
+  text-align: center;
+  padding: 40px 5px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  color: #9d9faa;
+  text-decoration: line-through;
+}
+.dCartList li .dSpecailPrice {
+  width: 150px;
+  text-align: center;
+  padding: 40px 5px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  color: #e23965;
+}
+
+.checkoutorder {
+  display: flexbox;
+  position: absolute;
+  float: right;
+  right: 30px;
+  top: 200px;
+  width: 280px;
+  height: 350px;
+  background-color: #44464f;
+  font-weight: 500;
+}
+.checkoutorder .dOrderTitle {
+  font-size: 25px;
+  font-weight: 60px;
+  padding: 25px 30px;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+}
+.checkoutorder .sSubtotaltitle {
+  font-size: 18px;
+  line-height: 48px;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  padding: 9px 0 9px 30px;
+}
+.checkoutorder .sSubtotal {
+  font-size: 26px;
+  line-height: 33px;
+  float: right;
+  padding: 9px 30px 9px 0px;
+  letter-spacing: 0.1em;
+  color: #9d9faa;
+}
+.checkoutorder .sSubtotal ::before {
+  display: flex;
+}
+.checkoutorder .sDiscount {
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  color: #9d9faa;
+  padding: 10px;
+}
+.checkoutorder .sDiscount input {
+  margin: 5px;
+  background-color: #1d1f27;
+  border-radius: 10px;
+}
+.checkoutorder .sDiscount input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+.checkoutorder .sNoSpecial {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  color: #e23965;
+}
+.checkoutorder .icodeitems {
+  text-align: center;
+  display: flex;
+  padding: 0 20px;
+}
+.checkoutorder .icodeitems .iDiscountCode {
+  background-color: #1d1f27;
+  border: 2px solid #9d9faa;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px;
+}
+.checkoutorder .icodeitems .iCodeSubmit {
+  width: 100px;
+  background-color: #9d9faa;
+  border: 2px solid #9d9faa;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.checkoutorder .icodeitems .iCodeSubmit:hover {
+  background-color: #44464f;
+  color: #ffffff;
+}
+.checkoutorder .dTotalPrice {
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: 700;
+  text-align: right;
+  letter-spacing: 0.1em;
+  padding: 9px 20px 9px 0px;
+  color: #e23965;
+}
+.checkoutorder .iorder {
+  background-color: #4967ff;
+  padding: 10px 80px;
+  border-radius: 24px;
+  border: 1px solid #4967ff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  margin: 5px 35px;
+}
+.checkoutorder .iorder:hover {
+  background-color: #8895ff;
+}
+
+.dCartNone {
+  display: flex;
+  padding: 50px 0 0 0;
+  justify-content: center;
+}
+.dCartNone img {
+  width: 300px;
+}
+
+.btnCartNone {
+  text-align: center;
+}
+.btnCartNone button {
+  background-color: #4967ff;
+  border-radius: 24px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+}
+.btnCartNone button svg {
+  color: #ffffff;
+}
+.btnCartNone button:hover {
+  background-color: #8895ff;
+}/*# sourceMappingURL=orderhistory.css.map */

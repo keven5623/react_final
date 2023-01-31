@@ -1,0 +1,108 @@
+$primaryDarker: #000000;
+$primary: #1d1f27;
+$primaryLighter: #2f3137;
+$primaryLightest: #6f717b;
+$primaryLightestest: #9d9faa;
+
+$blueDarker: #003dcb;
+$blue: #4967ff;
+$blueLighter: #8895ff;
+
+$greenDarker: #00b114;
+$green: #38e54d;
+
+$redDarker: #aa003b;
+$red: #e23965;
+
+$yellow: #e0e03b;
+
+$white: #ffffff;
+
+@font-face {
+  font-family: "interRegular";
+  src: url(./font/Inter-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "intreRegular", "Noto Sans TC", sans-serif;
+  user-select: none;
+}
+
+body {
+  background-color: $primary;
+}
+
+.top {
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  bottom: 64px;
+  right: 64px;
+  z-index: 10;
+  button {
+    background-color: inherit;
+    border: none;
+    img {
+      opacity: 0.6;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@import "./nav";
+@import "./navLogOut";
+@import "./footer";
+@import "./coursepage";
+
+@import "./homepageHead1";
+@import "./homepageHead2";
+@import "./homepageHead3";
+@import "./homepageHead4";
+@import "./homepageHead5";
+@import "./homepageHead6";
+@import "./dashboardMain";
+@import "./dashboardBottom";
+@import "./video";
+@import "./profile";
+
+
+.navLogOut #active {
+  color: $blue;
+  pointer-events: none;
+  &:hover {
+    cursor: default;
+  }
+}
+nav #active {
+  color: $blue;
+  pointer-events: none;
+  &:hover {
+    cursor: default;
+  }
+}
+
+nav #active svg {
+  fill: $blue;
+  pointer-events: none;
+  &:hover {
+    cursor: default;
+  }
+}
+
+nav #active .collection .collectionBackground {
+  fill: $red;
+  pointer-events: none;
+}
+
+.navLogOut #active {
+  color: $blue;
+  pointer-events: none;
+  &:hover {
+    cursor: default;
+  }
+}

@@ -1,0 +1,154 @@
+.profileTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .profileTitleBox {
+    width: 81vw;
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .profileContainer {
+      display: flex;
+      align-items: center;
+      .profilePic {
+        width: 126px;
+        height: 126px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 63px;
+      }
+      .titleContainer {
+        padding-left: 36px;
+        h1 {
+          display: inline-block;
+          color: $primaryLightestest;
+          font-weight: 500;
+          font-size: 40px;
+          letter-spacing: 0.15em;
+        }
+        span {
+          padding-left: 16px;
+          font-weight: 700;
+          font-size: 40px;
+          color: $blue;
+          letter-spacing: 0.1em;
+        }
+        h2 {
+          font-weight: 500;
+          font-size: 28px;
+          line-height: 48px;
+          color: $white;
+          letter-spacing: 0.15em;
+        }
+      }
+    }
+    .buttonBox {
+      display: flex;
+      .goToBackStage {
+        display: flex;
+        align-items: center;
+        background-color: $red;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        padding: 14px 26px 16px 26px;
+        border-radius: 32px;
+        cursor: pointer;
+        &:hover {
+          background-color: $redDarker;
+        }
+        img:nth-child(1) {
+          // height: 18px;
+          // width: 18px;
+          padding: 1px 8px 0px 2px;
+        }
+        img:nth-child(2) {
+          height: 18px;
+          width: 18px;
+          padding: 1px 0px 0px 8px;
+        }
+      }
+      .beTeacher{
+        position: absolute;
+        // top: 15%;
+        right: 22%;
+        display: flex;
+        align-items: center;
+        background-color: $red;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        padding: 14px 26px 16px 26px;
+        border-radius: 32px;
+        cursor: pointer;
+        &:hover {
+          background-color: $redDarker;
+        }
+      }
+      .changeInfo {
+        margin-left: 24px;
+        display: flex;
+        align-items: center;
+        background-color: $blue;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        padding: 14px 26px 16px 26px;
+        border-radius: 32px;
+        cursor: pointer;
+        &:hover {
+          background-color: $blueDarker;
+        }
+      }
+    }
+  }
+}
+
+.profileStockCollection,
+.profileOwnCourse,
+.profileCourseCollection,
+.profileArticleCollection {
+  min-height: 700px;
+  table {
+    width: 1565px;
+
+    border: none;
+    border-collapse: collapse;
+    margin: 40px 9vw 0 9vw;
+    tr > td:nth-child(2) {
+      width: 30px;
+    }
+
+    tr > td:nth-child(4) {
+      width: 30px;
+    }
+
+    tr > td:nth-child(6) {
+      width: 30px;
+    }
+
+    tr {
+      border-bottom: solid 2px $primaryLightestest;
+      height: 54px;
+      td {
+        display: inline-block;
+      }
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 32px;
+      letter-spacing: 0.1em;
+      display: inline-block;
+      color: $blue;
+      padding-bottom: 6px;
+      cursor: pointer;
+    }
+  }
+}

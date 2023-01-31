@@ -1,0 +1,32 @@
+.head6 {
+  background-color: $primaryLighter;
+  overflow: hidden;
+  height: 247px;
+  h3 {
+    padding-top: 36px;
+    color: $primaryLightestest;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 54px;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+  .logoBox1 {
+    padding-top: 44px;
+    padding-bottom: 48px;
+    height: 70px;
+    width: 2640px;
+    img {
+      padding: 0 36px 0 36px;
+    }
+  }
+  .logoBox2 {
+    position: relative;
+    top: -118px;
+    height: 70px;
+    width: 2640px;
+    img {
+      padding: 0 36px 0 36px;
+    }
+  }
+}

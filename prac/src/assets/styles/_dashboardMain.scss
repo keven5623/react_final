@@ -1,0 +1,262 @@
+.dashboardMain {
+  height: 768px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 9vw 0 9vw;
+
+  $primaryDarker: #000000;
+$primary: #1d1f27;
+$primaryLighter: #2f3137;
+$primaryLightest: #6f717b;
+$primaryLightestest: #9d9faa;
+
+$blueDarker: #003dcb;
+$blue: #4967ff;
+$blueLighter: #8895ff;
+
+$greenDarker: #00b114;
+$green: #38e54d;
+
+$redDarker: #aa003b;
+$red: #e23965;
+
+$yellow: #e0e03b;
+
+$white: #ffffff;
+  
+  .mainBox {
+    width: 82vw;
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    .collectionStock {
+      padding: 12px 10px 0px 20px;
+      width: 345px;
+      height: 588px;
+      background-color: $primaryLighter;
+      .collectionStockTitle {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        height: 63px;
+        input {
+          width: 220px;
+          background-color: $primary;
+          border-radius: 20px;
+          height: 40px;
+          margin-left: 20px;
+          padding: 0 0 0 52px;
+          color: $primaryLightestest;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          border: none;
+          background-image: url("../imgs/searchIcon.png");
+          background-size: 24px;
+          background-repeat: no-repeat;
+          background-position: 16px;
+        }
+        .collection .collectionBackground {
+          cursor: pointer;
+          fill: $primaryLighter;
+          &:hover {
+            fill: $red;
+          }
+        }
+      }
+      .collectionStockListBox {
+        height: 513px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          position: relative;
+          top: 12px;
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-track-piece {
+          background: $primary;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $primaryLightest;
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        position: relative;
+        top: -2px;
+        svg {
+          position: relative;
+          top: 3px;
+        }
+        tr {
+          &:hover {
+            background-color: $primaryLightest;
+            cursor: pointer;
+          }
+        }
+        td {
+          height: 58px;
+          border-top: solid 2px $primaryLightest;
+        }
+        tr > td:nth-child(1) {
+          width: 43px;
+        }
+        tr > td:nth-child(2) {
+          width: 180px;
+        }
+        tr > td:nth-child(3) {
+          width: 100px;
+          text-align: right;
+        }
+        p {
+          position: relative;
+          top: -1px;
+          color: $white;
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+        }
+        h6 {
+          position: relative;
+          top: -1px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: $primaryLightestest;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    .mainStock {
+      width: 1142px;
+      height: 612px;
+      h1 {
+        display: inline-block;
+        color: $white;
+        font-weight: 700;
+        font-size: 36px;
+        letter-spacing: 0.15em;
+        span {
+          padding-left: 16px;
+          font-weight: 500;
+          font-size: 30px;
+          color: $primaryLightestest;
+          letter-spacing: 0.1em;
+        }
+      }
+      .stockInfoContainer {
+        height: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background-color: aqua;
+        .stockInfoBox {
+          width: 370px;
+          h2 {
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            :first-child {
+              margin-left: 8px;
+            }
+            span {
+              font-weight: 700;
+              font-size: 22px;
+              padding-left: 8px;
+              letter-spacing: 0.02em;
+            }
+          }
+          h3 {
+            padding-top: 4px;
+            font-weight: 500;
+            color: $white;
+            font-size: 28px;
+            letter-spacing: 0.1em;
+          }
+          h6 {
+            padding-top: 4px;
+            color: $primaryLightestest;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 33px;
+            letter-spacing: 0.1em;
+          }
+        }
+        table {
+          border-collapse: collapse;
+          color: $white;
+          width: 220px;
+          font-weight: 300;
+          font-size: 18px;
+          letter-spacing: 0.15em;
+          tr {
+            height: 36px;
+            border-bottom: solid 1.5px white;
+          }
+          tr > td:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+      .stockTab {
+        table {
+          margin-top: 12px;
+          border: none;
+          border-collapse: collapse;
+          tr > td:nth-child(4) {
+            width: 875px;
+          }
+          tr > td:nth-child(2) {
+            width: 30px;
+          }
+
+          tr > td:nth-child(4) {
+            width: 875px;
+          }
+          tr > td:nth-child(4) {
+            width: 875px;
+          }
+          tr {
+            border-bottom: solid 2px $primaryLightestest;
+            height: 56px;
+          }
+          h2 {
+            font-weight: 600;
+            font-size: 32px;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            color: $blue;
+            padding-bottom: 6px;
+            cursor: pointer;
+          }
+        }
+      }
+      .tabKChart {
+        .googleChart {
+          position: relative;
+          top: 22px;
+        }
+        .nowPrice {
+          position: relative;
+          width: 300px;
+          top: -310px;
+          left: 800px;
+          border-collapse: collapse;
+          border: solid 1px gold;
+          tr {
+            height: 40px;
+          }
+          p {
+            color: $white;
+            font-weight: 300;
+            font-size: 18px;
+            letter-spacing: 0.15em;
+          }
+        }
+      }
+    }
+  }
+}

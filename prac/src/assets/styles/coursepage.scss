@@ -1,0 +1,644 @@
+$pramaryDarker: #000000;
+$primary: #1d1f27;
+$primaryLighter: #44464f;
+$primaryLightest: #6f717b;
+$primaryLightestest: #9d9faa;
+
+$blueDarker: #003dcb;
+$blue: #4967ff;
+$blueLighter: #8895ff;
+
+$greenDarker: #00b114;
+$green: #38e54d;
+
+$redDarker: #aa003b;
+$red: #e23965;
+
+$yellow: #e0e03b;
+
+$white: #ffffff;
+
+@font-face {
+  font-family: "interRegular";
+  src: url(./font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "interBold";
+  src: url(./font/Inter-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "intreRegular", "Noto Sans TC", sans-serif;
+  user-select: none;
+  text-decoration: none;
+  // outline: red solid 0.1px;
+}
+
+body {
+  background-color: $primary;
+}
+
+.dTop {
+  svg {
+    border-radius: 50%;
+    position: fixed;
+    z-index: 200;
+    bottom: 10px;
+    right: 10px;
+    path {
+      transition: all 0.3s;
+      fill: $white;
+      opacity: 0.3;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.divSale {
+  background-color: $greenDarker;
+  height: 100%;
+  display: flex;
+
+  font: {
+    weight: 700;
+    size: 20px;
+  }
+  line-height: 24px;
+  letter-spacing: 0.15em;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
+  color: $white;
+  span {
+    color: $green;
+    font: {
+      weight: 700;
+      size: 20px;
+    }
+    line-height: 24px;
+    letter-spacing: 0.15em;
+  }
+  button {
+    border: 2px solid $white;
+    color: $white;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 24px;
+    display: flex;
+    vertical-align: middle;
+    font: {
+      style: normal;
+      weight: 700;
+      size: 20px;
+    }
+    transition: all 0.3s;
+    line-height: 24px;
+    letter-spacing: 0.15em;
+    &:hover {
+      background-color: $white;
+      color: $greenDarker;
+      > svg {
+        path {
+          fill: $greenDarker;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
+.divText {
+  height: 150px;
+  background-color: $primary;
+  color: $blue;
+  text-align: center;
+  padding-top: 100px;
+  span {
+    padding-bottom: 3px;
+    border-bottom: 6px solid $red;
+    font: {
+      weight: 700;
+      size: 40px;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  .card {
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    position: relative;
+
+    .cardImg {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      left: 0;
+      height: 100%;
+      z-index: 2;
+      background-color: $pramaryDarker;
+      transition: 0.5s;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 0.4;
+        transition: 0.5s;
+      }
+      .cardImg {
+        transform: translateY(-100px);
+        transition: all 0.9s;
+      }
+    }
+    ul {
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      display: flex;
+      li {
+        list-style: none;
+
+        a {
+          position: relative;
+
+          margin: 0 auto;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          background-color: $white;
+          font-size: 23px;
+          color: $pramaryDarker;
+          font-weight: bold;
+          margin: 0 6px;
+          transition: 0.4s;
+          transform: translateY(200px);
+          opacity: 0;
+          span {
+            color: rgba(0, 0, 0, 0);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .titletxt {
+      position: absolute;
+      bottom: 400px;
+      left: 0;
+      bottom: 0;
+      background: $white;
+      width: 100%;
+      height: 40px;
+      z-index: 2;
+      padding: 10px;
+      transition: 0.6s;
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+
+  .card:hover {
+    ul li a span {
+      transform: translateY(0px);
+      color: $pramaryDarker;
+    }
+    .titletxt {
+      bottom: 0;
+      height: 100px;
+    }
+  }
+
+  ul li Link button {
+    font-size: 50px;
+    width: 100px;
+    height: 30px;
+    transition: 0.8s;
+    &:hover {
+      transform: rotate(360deg);
+      background-color: $white;
+    }
+  }
+}
+.dHotCarousel {
+  .slick-dots {
+    bottom: -80px;
+
+    li {
+      margin: 25px;
+      button::before {
+        content: "  ";
+        background-color: $pramaryDarker;
+        width: 60px;
+        height: 15px;
+        border-radius: 2px;
+      }
+    }
+    .slick-active {
+      button::before {
+        background-color: $blue;
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 100;
+  }
+  .slick-arrow {
+    right: 0px;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  .slick-prev:before {
+    content: url(../../components/CoursePage/img/ftoleft.svg);
+    left: 80px;
+    position: absolute;
+    opacity: 0.35;
+    top: -10px;
+    transition: all 0.8s;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+  .slick-next:before {
+    content: url(../../components/CoursePage/img/ftoright.svg);
+    right: 60px;
+    position: absolute;
+    opacity: 0.35;
+    transition: all 0.8s;
+    top: -10px;
+  }
+}
+
+.divToYouText {
+  background-color: $primary;
+}
+.divToYou {
+  background-color: $primary;
+  height: 500px;
+  .slick-dots {
+    bottom: -80px;
+
+    li {
+      margin: 25px;
+      button::before {
+        content: "  ";
+        background-color: $pramaryDarker;
+        width: 60px;
+        height: 15px;
+        border-radius: 2px;
+      }
+    }
+    .slick-active {
+      button::before {
+        background-color: $blue;
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 100;
+  }
+  .slick-arrow {
+    right: 0px;
+  }
+
+  .slick-prev:before {
+    content: url(../../components/CoursePage/img/toleft.svg);
+    left: 90px;
+    top: -10px;
+    position: absolute;
+    opacity: 0.35;
+    transition: all 0.8s;
+  }
+  .slick-next:before {
+    content: url(../../components/CoursePage/img/toright.svg);
+    right: 50px;
+    top: -10px;
+    position: absolute;
+    opacity: 0.35;
+    transition: all 0.8s;
+  }
+
+  .dBecause {
+    padding: 20px;
+    color: $white;
+    font-size: 25px;
+    text-align: center;
+  }
+  .divItems {
+    background-color: $white;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    border-bottom: 10px solid $red;
+    .imgClass {
+      float: left;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  .dClasstext {
+    float: right;
+    padding: 30px;
+    color: $primaryLightestest;
+    .sStar {
+      color: $redDarker;
+    }
+    .score {
+      padding: 3px px;
+      span {
+        padding: 0 3px;
+        vertical-align: middle;
+      }
+      .sPersonCount,
+      .sClock {
+        float: right;
+      }
+      .sOnStar {
+        path {
+          fill: $yellow;
+        }
+      }
+    }
+    h5 {
+      padding: 10px;
+      line-height: 48px;
+      letter-spacing: 0.1em;
+      color: $blue;
+      font: {
+        weight: 700;
+        size: 32px;
+      }
+    }
+    p {
+      padding: 10px;
+    }
+    .dClassPrice {
+      line-height: 50px;
+      letter-spacing: 0.1em;
+      color: $red;
+      text-align: center;
+
+      font: {
+        weight: 600;
+        size: 22px;
+      }
+      button {
+        transition: all 0.2s ease-out;
+        padding: 5px 15px;
+        display: flexbox;
+        width: 100px;
+        height: 40px;
+        background-color: $red;
+        color: $white;
+        font-size: medium;
+        border: 2px solid $red;
+        border-radius: 24px;
+        &:hover {
+          background-color: $redDarker;
+          border: 1px solid $red;
+        }
+      }
+    }
+  }
+}
+
+.divNEW {
+  background: $primary;
+  .ulNewContainer {
+    width: 90%;
+    height: calc(400 * 3);
+
+    margin: 0 auto;
+    list-style-type: none;
+    .slick-dots {
+      bottom: -80px;
+
+      li {
+        margin: 25px;
+        button::before {
+          content: "  ";
+          background-color: $pramaryDarker;
+          width: 60px;
+          height: 15px;
+          border-radius: 2px;
+        }
+      }
+      .slick-active {
+        button::before {
+          background-color: $blue;
+        }
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      z-index: 100;
+    }
+    .slick-arrow {
+      right: 0px;
+    }
+
+    .slick-prev:before {
+      content: url(../../components/CoursePage/img/toleft.svg);
+      left: -30px;
+      top: -10px;
+      position: absolute;
+      opacity: 0.35;
+      transition: all 0.8s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .slick-next:before {
+      content: url(../../components/CoursePage/img/toright.svg);
+      right: -60px;
+      top: -10px;
+      position: absolute;
+      opacity: 0.35;
+      transition: all 0.8s;
+    }
+  }
+}
+.divAllCourse {
+  margin: 10px;
+  padding: 100px;
+  background: $primary;
+  .ulAllCourseContainer {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 90%;
+    justify-content: center;
+    height: calc(400 * 3);
+    margin: 0 auto;
+    list-style-type: none;
+  }
+}
+.dCard {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 18px;
+  width: 280px;
+  display: flex;
+  position: relative;
+  height: fit-content;
+  flex-direction: column;
+  transition: all 0.1s ease-in-out;
+  color: $primaryLightestest;
+  border: 2px solid transparent;
+
+  &:hover {
+    border: 2px solid $primaryLightestest;
+    -webkit-box-shadow: 0px 0px 0px 1px #a0a0a0,
+      inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 0px 0px 1px #a0a0a0,
+      inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
+  }
+  > img:hover,
+  > div:hover {
+    filter: saturate(3);
+  }
+  .dCardScore {
+    justify-content: baseline;
+    span {
+      display: inline-flex;
+    }
+  }
+  .dCardStar {
+    color: $redDarker;
+    padding: 0 5px;
+  }
+  .dCardStarActive {
+    path {
+      fill: $primaryLightestest;
+    }
+  }
+
+  .sOnStar {
+    path {
+      fill: $yellow;
+    }
+  }
+  .dCardTitle {
+    color: $blue;
+    font: {
+      weight: 700;
+      size: 22px;
+    }
+    line-height: 33px;
+    letter-spacing: 0.1em;
+  }
+  .imgCard {
+    object-fit: contain;
+    position: relative;
+  }
+  .shopCart {
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    padding: 5px;
+    display: flex;
+    float: right;
+    font-size: 25px;
+    z-index: 300;
+    color: $red;
+  }
+  .dCardMark {
+    position: absolute;
+    top: 130px;
+    left: 10px;
+    font-size: 25px;
+    padding: 5px;
+    color: $red;
+    z-index: 300;
+  }
+  .dCardTeacher {
+    color: $primary;
+    font: {
+      weight: 400;
+      size: 16px;
+    }
+    line-height: 33px;
+    /* identical to box height, or 206% */
+
+    letter-spacing: 0.05em;
+  }
+  .dCardtext {
+    padding: 10px;
+    background-color: $white;
+    position: relative;
+    height: 100%;
+    border-bottom: 8px solid #e23965;
+    align-items: center;
+    height: 200px;
+  }
+  .dCardPrice {
+    font: {
+      weight: 600;
+      size: 22px;
+    }
+    justify-content: center;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    color: $red;
+    float: right;
+    position: relative;
+    top: -20px;
+  }
+  svg {
+    path {
+      padding: 0 3px;
+    }
+  }
+}
+.dCardMore {
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    background-color: $blue;
+    padding: 10px 30px;
+    font: {
+      weight: 600;
+      size: 18px;
+    }
+    display: flex;
+    vertical-align: middle;
+    letter-spacing: 0.15em;
+    color: $white;
+    border-radius: 24px;
+    &:hover {
+      background-color: $blueDarker;
+    }
+  }
+}

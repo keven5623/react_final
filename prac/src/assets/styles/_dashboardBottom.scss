@@ -1,0 +1,672 @@
+$primaryDarker: #000000;
+$primary: #1d1f27;
+$primaryLighter: #2f3137;
+$primaryLightest: #6f717b;
+$primaryLightestest: #9d9faa;
+
+$blueDarker: #003dcb;
+$blue: #4967ff;
+$blueLighter: #8895ff;
+
+$greenDarker: #00b114;
+$green: #38e54d;
+
+$redDarker: #aa003b;
+$red: #e23965;
+
+$yellow: #e0e03b;
+
+$white: #ffffff;
+.dashboardBottom {
+  height: 1070px;
+  box-sizing: content-box !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 12px;
+  h3 {
+    display: inline;
+    color: $blue;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.1em;
+  }
+  p {
+    display: inline;
+    font-size: 22px;
+    color: $white;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+  .dashboardBottomRow1,
+  .dashboardBottomRow2 {
+    box-sizing: content-box !important;
+    width: 81.15vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+    .addOrder,
+    .nowOrder {
+      margin-top: 36px;
+      padding: 32px;
+      width: 696px;
+      height: 328px;
+      background-color: $primaryLighter;
+    }
+    .addOrder {
+      box-sizing: content-box !important;
+
+      .pr7 {
+        padding-right: 7.1px;
+      }
+      .pr12 {
+        padding-right: 12px;
+      }
+      .pr8 {
+        padding-right: 8px;
+      }
+      .titleBox {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 4px;
+        border-bottom: solid 2px $primaryLightest;
+        .now {
+          color: $primaryLightest;
+        }
+      }
+
+      #stockKey,
+      #stockName {
+        margin-top: 16px;
+        width: 11.1vw;
+        height: 40px;
+        background-color: $primaryLightest;
+        color: $white;
+        font-size: 22px;
+        padding-left: 8px;
+        border: none;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+      #stockKey {
+        margin-right: 32px;
+      }
+      #limitPrice {
+        margin-top: 16px;
+        width: 9.6vw;
+        height: 40px;
+        background-color: $primaryLightest;
+        color: $white;
+        font-size: 22px;
+        padding-left: 8px;
+        border: none;
+        margin-right: 4px;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+      .radioButton {
+        width: 14px;
+        height: 14px;
+        margin: 0 8px 0 12px;
+        /* The native appearance is hidden */
+        appearance: none;
+        -webkit-appearance: none;
+        /* For a circular appearance we need a border-radius. */
+        border-radius: 50%;
+        /* The background will be the radio dot's color. */
+        background: $primaryLighter;
+        /* The border will be the spacing between the dot and the outer circle */
+        border: 3px solid $primaryLighter;
+        /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+        box-shadow: 0 0 0 2px $primaryLightest;
+
+        &:checked {
+          background: $red;
+        }
+      }
+      .orderValueLabel::after {
+        content: attr(dataT);
+        position: relative;
+        top: -37px;
+        left: 660px;
+        font-size: 22px;
+        color: white;
+        font-weight: 400;
+      }
+      #orderValue {
+        margin-top: 16px;
+        width: 29.9vw;
+        height: 40px;
+        background-color: $primaryLightest;
+        color: $white;
+        font-size: 22px;
+        padding-left: 8px;
+        border: none;
+        margin-right: 4px;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+      #agree {
+        position: relative;
+        margin: 0px 12px 8px 0;
+        width: 20px;
+        height: 20px;
+        -webkit-appearance: none;
+        background: none;
+        border: solid 2px $primaryLightest;
+        cursor: pointer;
+        &::before {
+          content: "";
+          color: transparent;
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+          background-size: contain;
+        }
+        &:checked {
+          background-image: url("../imgs/checked.svg");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: left 0.8px;
+        }
+      }
+      .agreeArea {
+        position: relative;
+        top: -14px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        h6 {
+          color: $white;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 33px;
+          display: inline-block;
+          letter-spacing: 0.15em;
+          position: relative;
+          top: -12px;
+          a {
+            position: relative;
+            left: 2px;
+            top: -1px;
+            color: $blueLighter;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: solid 2px $blueLighter;
+            font-size: 15px;
+          }
+        }
+      }
+      #sale {
+        position: relative;
+        top: -12px;
+        width: 17.2vw;
+        height: 48px;
+        border-radius: 24px;
+        font-size: 22px;
+        color: $white;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        background-color: $green;
+        margin-right: 32px;
+        border: none;
+        &:hover {
+          background-color: $greenDarker;
+          cursor: pointer;
+        }
+      }
+      #buy {
+        position: relative;
+        top: -12px;
+        width: 17.2vw;
+        height: 48px;
+        border-radius: 24px;
+        font-size: 22px;
+        color: $white;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        background-color: $red;
+        border: none;
+        &:hover {
+          background-color: $redDarker;
+          cursor: pointer;
+        }
+      }
+    }
+    .nowTotal,
+    .orderHistory {
+      box-sizing: content-box !important;
+      margin-top: 36px;
+      padding: 32px;
+      width: 696px;
+      height: 426px;
+      background-color: $primaryLighter;
+    }
+  }
+}
+
+.nowOrder {
+    box-sizing: content-box !important;
+  .titleBox {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+    border-bottom: solid 2px $primaryLightest;
+    .now {
+      color: $primaryLightest;
+    }
+  }
+  .nowOrderTitle {
+    height: 40px;
+    border-bottom: solid 2px $primaryLightest;
+    border-collapse: collapse;
+    width: 100%;
+    p {
+      display: inline-block;
+      padding-bottom: 2px;
+      color: $primaryLightestest;
+    }
+    tr {
+      th {
+        svg {
+          padding-left: 4px;
+        }
+      }
+    }
+    tr > th:nth-child(1) {
+      width: 181px;
+      text-align: left;
+    }
+    tr > th:nth-child(2) {
+      width: 207px;
+      text-align: left;
+    }
+    tr > th:nth-child(3) {
+      width: 156px;
+      text-align: right;
+    }
+    tr > th:nth-child(4) {
+      width: 170px;
+      text-align: right;
+      svg {
+        margin-right: 26px;
+      }
+    }
+  }
+  .nowOrderListBox {
+    width: 100%;
+    height: 234px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      position: relative;
+      top: 12px;
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background: $primary;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primaryLightest;
+    }
+    .nowOrderList {
+      position: relative;
+      top: -2px;
+      border: none;
+      border-collapse: collapse;
+      width: 674px;
+      tr {
+        border-top: solid 2px $primaryLightest;
+        height: 70px;
+        td {
+          .cancelButton {
+            cursor: pointer;
+            path {
+              fill: $primaryLightestest;
+            }
+            &:hover path {
+              fill: $white;
+            }
+          }
+          span {
+            color: $primaryLightestest;
+            letter-spacing: 0.1em;
+          }
+        }
+      }
+
+      tr > td:nth-child(1) {
+        width: 45px;
+      }
+      tr > td:nth-child(2) {
+        width: 130px;
+        p {
+          position: relative;
+          top: -4px;
+        }
+      }
+      tr > td:nth-child(3) {
+        width: 218px;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+      tr > td:nth-child(4) {
+        width: 168px;
+        text-align: right;
+      }
+      tr > td:nth-child(5) {
+        width: 156px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.nowTotal {
+  .titleBox {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+    border-bottom: solid 2px $primaryLightest;
+    .now {
+      color: $primaryLightest;
+    }
+  }
+  .totalBox {
+    height: 116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h4 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 33px;
+      letter-spacing: 0.1em;
+      color: $white;
+    }
+    h5 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      text-align: right;
+      span {
+        font-weight: 700;
+        font-size: 22px;
+
+        text-align: right;
+      }
+    }
+  }
+  .nowTotalTitle {
+    height: 40px;
+    border-top: solid 2px $primaryLightest;
+    border-bottom: solid 2px $primaryLightest;
+    border-collapse: collapse;
+    width: 100%;
+
+    p {
+      display: inline-block;
+      padding-bottom: 2px;
+      color: $primaryLightestest;
+    }
+    tr {
+      th {
+        svg {
+          padding-left: 4px;
+        }
+      }
+    }
+
+    tr > th:nth-child(1) {
+      width: 199px;
+      text-align: left;
+    }
+    tr > th:nth-child(2) {
+      width: 184px;
+      text-align: right;
+    }
+    tr > th:nth-child(3) {
+      width: 183px;
+      text-align: right;
+    }
+    tr > th:nth-child(4) {
+      width: 198px;
+      text-align: right;
+      svg {
+        margin-right: 26px;
+      }
+    }
+  }
+  .nowTotalListBox {
+    width: 100%;
+    height: 214px;
+    overflow-y: auto;
+    position: relative;
+    &::-webkit-scrollbar {
+      position: relative;
+      top: 12px;
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background: $primary;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primaryLightest;
+    }
+    .nowTotalList {
+      position: relative;
+      top: -2px;
+      border: none;
+      border-collapse: collapse;
+      width: 674px;
+      tr {
+        border-top: solid 2px $primaryLightest;
+        height: 70px;
+        td {
+          span {
+            color: $primaryLightestest;
+            letter-spacing: 0.1em;
+          }
+        }
+      }
+      tr > td:nth-child(1) {
+        width: 193px;
+      }
+      tr > td:nth-child(2) {
+        width: 176px;
+        text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+      tr > td:nth-child(3) {
+        width: 176px;
+        text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+      tr > td:nth-child(4) {
+        width: 168px;
+        text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.orderHistory {
+  box-sizing: content-box !important;
+  .titleBox {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+    border-bottom: solid 2px $primaryLightest;
+  }
+  .orderHistoryBox {
+    height: 116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .pr12 {
+      padding-right: 12px;
+    }
+    select {
+      width: 11.2vw;
+    }
+    input {
+      width: 11.2vw;
+    }
+    #orderTime {
+      width: 11vw;
+      height: 40px;
+      background-color: $primaryLightest;
+      color: $white;
+      font-size: 22px;
+      padding-left: 8px;
+      border: none;
+      letter-spacing: 0.1em;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+    #stockName {
+      width: 11vw;
+      height: 40px;
+      background-color: $primaryLightest;
+      color: $white;
+      font-size: 22px;
+      padding-left: 8px;
+      border: none;
+      letter-spacing: 0.1em;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+  .orderHistoryTitle {
+    height: 40px;
+    border-top: solid 2px $primaryLightest;
+    border-bottom: solid 2px $primaryLightest;
+    border-collapse: collapse;
+    width: 100%;
+
+    p {
+      display: inline-block;
+      padding-bottom: 2px;
+      color: $primaryLightestest;
+    }
+
+    tr > th:nth-child(1) {
+      width: 182px;
+      text-align: left;
+    }
+    tr > th:nth-child(2) {
+      width: 202px;
+      text-align: left;
+    }
+    tr > th:nth-child(3) {
+      width: 172px;
+      text-align: right;
+    }
+    tr > th:nth-child(4) {
+      width: 208px;
+      text-align: right;
+      p {
+        padding-right: 22px;
+      }
+    }
+  }
+
+  .orderHistoryListBox {
+    width: 100%;
+    height: 214px;
+    overflow-y: auto;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      position: relative;
+      top: 12px;
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background: $primary;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primaryLightest;
+    }
+    .orderHistoryList {
+      position: relative;
+      top: -2px;
+      border: none;
+      border-collapse: collapse;
+      width: 674px;
+      tr {
+        border-top: solid 2px $primaryLightest;
+        height: 70px;
+      }
+      tr > td:nth-child(1) {
+        width: 173px;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+      tr > td:nth-child(2) {
+        width: 196px;
+        text-align: left;
+        p {
+          position: relative;
+          top: -2px;
+        }
+        span {
+          color: $primaryLightestest;
+          letter-spacing: 0.1em;
+        }
+      }
+      tr > td:nth-child(3) {
+        width: 167px;
+        text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+      tr > td:nth-child(4) {
+        width: 177px;
+        text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,568 @@
+@font-face {
+  font-family: "interRegular";
+  src: url(./font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "interBold";
+  src: url(./font/Inter-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "intreRegular", "Noto Sans TC", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #1d1f27;
+}
+
+.dTop svg {
+  border-radius: 50%;
+  position: fixed;
+  z-index: 200;
+  bottom: 10px;
+  right: 10px;
+}
+.dTop svg path {
+  transition: all 0.3s;
+  fill: #ffffff;
+  opacity: 0.3;
+}
+.dTop svg path:hover {
+  opacity: 0.8;
+}
+
+.divSale {
+  background-color: #00b114;
+  height: 100%;
+  display: flex;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15em;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
+  color: #ffffff;
+}
+.divSale span {
+  color: #38e54d;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15em;
+}
+.divSale button {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 24px;
+  display: flex;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all 0.3s;
+  line-height: 24px;
+  letter-spacing: 0.15em;
+}
+.divSale button:hover {
+  background-color: #ffffff;
+  color: #00b114;
+}
+.divSale button:hover > svg path {
+  fill: #00b114;
+  transition: all 0.3s;
+}
+
+.divText {
+  height: 150px;
+  background-color: #1d1f27;
+  color: #4967ff;
+  text-align: center;
+  padding-top: 100px;
+}
+.divText span {
+  padding-bottom: 3px;
+  border-bottom: 6px solid #e23965;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+.slider:active, .slider:hover, .slider:focus {
+  outline: none;
+  border: none;
+}
+.slider .card {
+  width: 100%;
+  height: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.slider .card .cardImg {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+  background-color: #000000;
+  transition: 0.5s;
+}
+.slider .card .cardImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider .card:hover img {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.slider .card:hover .cardImg {
+  transform: translateY(-100px);
+  transition: all 0.9s;
+}
+.slider .card ul {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+}
+.slider .card ul li {
+  list-style: none;
+}
+.slider .card ul li a {
+  position: relative;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 23px;
+  color: #000000;
+  font-weight: bold;
+  margin: 0 6px;
+  transition: 0.4s;
+  transform: translateY(200px);
+  opacity: 0;
+}
+.slider .card ul li a span {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+.slider .card .titletxt {
+  position: absolute;
+  bottom: 400px;
+  left: 0;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+  height: 40px;
+  z-index: 2;
+  padding: 10px;
+  transition: 0.6s;
+  text-align: center;
+  font-size: 30px;
+}
+.slider .card:hover ul li a span {
+  transform: translateY(0px);
+  color: #000000;
+}
+.slider .card:hover .titletxt {
+  bottom: 0;
+  height: 100px;
+}
+.slider ul li Link button {
+  font-size: 50px;
+  width: 100px;
+  height: 30px;
+  transition: 0.8s;
+}
+.slider ul li Link button:hover {
+  transform: rotate(360deg);
+  background-color: #ffffff;
+}
+
+.dHotCarousel .slick-dots {
+  bottom: -80px;
+}
+.dHotCarousel .slick-dots li {
+  margin: 25px;
+}
+.dHotCarousel .slick-dots li button::before {
+  content: "  ";
+  background-color: #000000;
+  width: 60px;
+  height: 15px;
+  border-radius: 2px;
+}
+.dHotCarousel .slick-dots .slick-active button::before {
+  background-color: #4967ff;
+}
+.dHotCarousel .slick-prev,
+.dHotCarousel .slick-next {
+  z-index: 100;
+}
+.dHotCarousel .slick-arrow {
+  right: 0px;
+}
+.dHotCarousel .slick-arrow:hover {
+  opacity: 0.85;
+}
+.dHotCarousel .slick-prev:before {
+  content: url(../../components/CoursePage/img/ftoleft.svg);
+  left: 80px;
+  position: absolute;
+  opacity: 0.35;
+  top: -10px;
+  transition: all 0.8s;
+}
+.dHotCarousel .slick-prev:before:hover {
+  opacity: 0.85;
+}
+.dHotCarousel .slick-next:before {
+  content: url(../../components/CoursePage/img/ftoright.svg);
+  right: 60px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+  top: -10px;
+}
+
+.divToYouText {
+  background-color: #1d1f27;
+}
+
+.divToYou {
+  background-color: #1d1f27;
+  height: 500px;
+}
+.divToYou .slick-dots {
+  bottom: -80px;
+}
+.divToYou .slick-dots li {
+  margin: 25px;
+}
+.divToYou .slick-dots li button::before {
+  content: "  ";
+  background-color: #000000;
+  width: 60px;
+  height: 15px;
+  border-radius: 2px;
+}
+.divToYou .slick-dots .slick-active button::before {
+  background-color: #4967ff;
+}
+.divToYou .slick-prev,
+.divToYou .slick-next {
+  z-index: 100;
+}
+.divToYou .slick-arrow {
+  right: 0px;
+}
+.divToYou .slick-prev:before {
+  content: url(../../components/CoursePage/img/toleft.svg);
+  left: 90px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+}
+.divToYou .slick-next:before {
+  content: url(../../components/CoursePage/img/toright.svg);
+  right: 50px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+}
+.divToYou .dBecause {
+  padding: 20px;
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+}
+.divToYou .divItems {
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 10px solid #e23965;
+}
+.divToYou .divItems .imgClass {
+  float: left;
+}
+.divToYou .divItems .imgClass img {
+  height: 100%;
+}
+.divToYou .dClasstext {
+  float: right;
+  padding: 30px;
+  color: #9d9faa;
+}
+.divToYou .dClasstext .sStar {
+  color: #aa003b;
+}
+.divToYou .dClasstext .score {
+  padding: 3px px;
+}
+.divToYou .dClasstext .score span {
+  padding: 0 3px;
+  vertical-align: middle;
+}
+.divToYou .dClasstext .score .sPersonCount,
+.divToYou .dClasstext .score .sClock {
+  float: right;
+}
+.divToYou .dClasstext .score .sOnStar path {
+  fill: #e0e03b;
+}
+.divToYou .dClasstext h5 {
+  padding: 10px;
+  line-height: 48px;
+  letter-spacing: 0.1em;
+  color: #4967ff;
+  font-weight: 700;
+  font-size: 32px;
+}
+.divToYou .dClasstext p {
+  padding: 10px;
+}
+.divToYou .dClasstext .dClassPrice {
+  line-height: 50px;
+  letter-spacing: 0.1em;
+  color: #e23965;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+}
+.divToYou .dClasstext .dClassPrice button {
+  transition: all 0.2s ease-out;
+  padding: 5px 15px;
+  display: flexbox;
+  width: 100px;
+  height: 40px;
+  background-color: #e23965;
+  color: #ffffff;
+  font-size: medium;
+  border: 2px solid #e23965;
+  border-radius: 24px;
+}
+.divToYou .dClasstext .dClassPrice button:hover {
+  background-color: #aa003b;
+  border: 1px solid #e23965;
+}
+
+.divNEW {
+  background: #1d1f27;
+}
+.divNEW .ulNewContainer {
+  width: 90%;
+  height: 1200;
+  margin: 0 auto;
+  list-style-type: none;
+}
+.divNEW .ulNewContainer .slick-dots {
+  bottom: -80px;
+}
+.divNEW .ulNewContainer .slick-dots li {
+  margin: 25px;
+}
+.divNEW .ulNewContainer .slick-dots li button::before {
+  content: "  ";
+  background-color: #000000;
+  width: 60px;
+  height: 15px;
+  border-radius: 2px;
+}
+.divNEW .ulNewContainer .slick-dots .slick-active button::before {
+  background-color: #4967ff;
+}
+.divNEW .ulNewContainer .slick-prev,
+.divNEW .ulNewContainer .slick-next {
+  z-index: 100;
+}
+.divNEW .ulNewContainer .slick-arrow {
+  right: 0px;
+}
+.divNEW .ulNewContainer .slick-prev:before {
+  content: url(../../components/CoursePage/img/toleft.svg);
+  left: -30px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+}
+.divNEW .ulNewContainer .slick-prev:before:hover {
+  opacity: 1;
+}
+.divNEW .ulNewContainer .slick-next:before {
+  content: url(../../components/CoursePage/img/toright.svg);
+  right: -60px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+}
+
+.divAllCourse {
+  margin: 10px;
+  padding: 100px;
+  background: #1d1f27;
+}
+.divAllCourse .ulAllCourseContainer {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+  width: 90%;
+  justify-content: center;
+  height: 1200;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.dCard {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 18px;
+  width: 280px;
+  display: flex;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  transition: all 0.1s ease-in-out;
+  color: #9d9faa;
+  border: 2px solid transparent;
+}
+.dCard:hover {
+  border: 2px solid #9d9faa;
+  box-shadow: 0px 0px 0px 1px #a0a0a0, inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
+}
+.dCard > img:hover,
+.dCard > div:hover {
+  filter: saturate(3);
+}
+.dCard .dCardScore {
+  justify-content: baseline;
+}
+.dCard .dCardScore span {
+  display: inline-flex;
+}
+.dCard .dCardStar {
+  color: #aa003b;
+  padding: 0 5px;
+}
+.dCard .dCardStarActive path {
+  fill: #9d9faa;
+}
+.dCard .sOnStar path {
+  fill: #e0e03b;
+}
+.dCard .dCardTitle {
+  color: #4967ff;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+}
+.dCard .imgCard {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+}
+.dCard .shopCart {
+  position: absolute;
+  top: 130px;
+  right: 10px;
+  padding: 5px;
+  display: flex;
+  float: right;
+  font-size: 25px;
+  z-index: 300;
+  color: #e23965;
+}
+.dCard .dCardMark {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  font-size: 25px;
+  padding: 5px;
+  color: #e23965;
+  z-index: 300;
+}
+.dCard .dCardTeacher {
+  color: #1d1f27;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 33px;
+  /* identical to box height, or 206% */
+  letter-spacing: 0.05em;
+}
+.dCard .dCardtext {
+  padding: 10px;
+  background-color: #ffffff;
+  position: relative;
+  height: 100%;
+  border-bottom: 8px solid #e23965;
+  align-items: center;
+  height: 200px;
+}
+.dCard .dCardPrice {
+  font-weight: 600;
+  font-size: 22px;
+  justify-content: center;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  color: #e23965;
+  float: right;
+  position: relative;
+  top: -20px;
+}
+.dCard svg path {
+  padding: 0 3px;
+}
+
+.dCardMore {
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dCardMore button {
+  background-color: #4967ff;
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  vertical-align: middle;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  border-radius: 24px;
+}
+.dCardMore button:hover {
+  background-color: #003dcb;
+}/*# sourceMappingURL=coursepage.css.map */

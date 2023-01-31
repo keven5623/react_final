@@ -1,0 +1,47 @@
+.head1 {
+  height: 1080px;
+  background-image: url(../imgs/head1Background.png);
+  background-repeat: no-repeat;
+  background-position: right -80px bottom -80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 9vw;
+  h2 {
+    color: $white;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.15em;
+  }
+  img {
+    width: 481px;
+    padding: 40px 0 40px 0;
+  }
+  a {
+    text-decoration: none;
+    width: 266px;
+    button {
+      display: flex;
+      align-items: center;
+      background-color: $blue;
+      border: none;
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      padding: 14px 26px 16px 26px;
+      border-radius: 32px;
+      cursor: pointer;
+      max-width: 266px;
+      &:hover {
+        background-color: $blueDarker;
+      }
+      img {
+        height: 18px;
+        width: 18px;
+        padding: 1px 0px 0px 8px;
+      }
+    }
+  }
+}
