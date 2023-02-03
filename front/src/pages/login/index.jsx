@@ -122,7 +122,7 @@ class Login extends Component {
                         { required: true,whitespace:true, message: '請輸入用戶名' },
                         { min: 4, message: '用戶名至少4位' },
                         { max: 12, message: '用戶名最多12位' },
-                        { pattern: /^[a-zA-Z0-9_]+$/, message: '用戶名必須是英文，數字，或下划線' }
+                        { pattern: /^[a-zA-Z0-9_\s\d]+$/, message: '用戶名必須是英文，數字，或下划線' }
                       ],
                     })(
                       <Input

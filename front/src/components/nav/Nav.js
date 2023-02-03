@@ -23,7 +23,7 @@ const Nav = () => {
   const [idmyCollection, setIdmyCollection] = useState("");
   const [idShoppingCart, setIdShoppingCart] = useState("");
 
-  const {auth_level,username,user_profile} = storageUtils.getUser()
+  const {auth_level,username,user_profile,photoURL} = storageUtils.getUser()
   const memberLogOut =()=>{
     storageUtils.removeUser();
     storageUtils.removeWatch();
@@ -190,7 +190,7 @@ const Nav = () => {
         </svg>
       </Link>
       <div className="profilePic">
-        <img src={user_profile ? user_profile : profilePic} alt="" onClick={colorNone} style={{width:50,height:50,borderRadius:'50%',objectFit:'cover'}}/>
+        <img src={(user_profile||photoURL) ? (user_profile||photoURL) : profilePic} alt="" onClick={colorNone} style={{width:50,height:50,borderRadius:'50%',objectFit:'cover'}}/>
         <div>
           <div className="mouth"></div>
           <ul className="dropDown">

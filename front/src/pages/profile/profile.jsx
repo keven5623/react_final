@@ -80,7 +80,9 @@ export default class Profile extends Component {
     const {isShowMember,memberName} = this.state
     const dotNumber = new Intl.NumberFormat("en-US");
     const username = memoryUtils.user.username ||memoryUtils.user.displayName || '';
-    const {user_profile,auth_level} = storageUtils.getUser()
+    const {user_profile,auth_level,photoURL} = storageUtils.getUser();
+    
+    
     if(!username){
       return <Redirect to='/' />
     }
@@ -93,7 +95,7 @@ export default class Profile extends Component {
                 <div
                   className="profilePic"
                   style={{
-                    backgroundImage: `url(${user_profile ? user_profile : profilePic})`,
+                    backgroundImage: `url(${(user_profile||photoURL) ? (user_profile||photoURL): profilePic})`,
                   }}
                 ></div>
                 <div className="titleContainer">
@@ -102,7 +104,7 @@ export default class Profile extends Component {
                     <span>{username}</span>
                   </h1>
                   <h2>
-                    {"當前體驗金餘額：$ " + dotNumber.format(30000)}
+                    {"當前體驗金餘額：$ " + dotNumber.format(98572)}
                   </h2>
                 </div>
               </div>

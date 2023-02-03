@@ -80,7 +80,7 @@ class Header extends Component {
   }
 
   render() {
-    const {user_profile} = storageUtils.getUser()
+    const {user_profile,photoURL} = storageUtils.getUser()
     const {currentTime,locationName,temp,des} = this.state;
     const user = memoryUtils.user.username ||memoryUtils.user.displayName;
     const menu = (
@@ -112,7 +112,7 @@ class Header extends Component {
         <div className='header-top'>
           <Dropdown overlay={menu}>
             <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-              <img src={user_profile ? user_profile : profilePic} alt="" style={{width:40,height:40,borderRadius:'50%',objectFit:'cover'}}/>
+              <img src={(user_profile||photoURL) ? (user_profile||photoURL) : profilePic} alt="" style={{width:40,height:40,borderRadius:'50%',objectFit:'cover'}}/>
             </a>
           </Dropdown>
         </div>

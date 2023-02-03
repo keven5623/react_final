@@ -58,7 +58,7 @@ class ArticleAdd extends Component {
         <LinkButton  onClick={()=>{this.props.history.goBack()}}>
           <Icon type='arrow-left'/>
         </LinkButton>
-        <span>{isUpdate ? '修改商品':'添加商品'}</span>
+        <span>{isUpdate ? '修改文章':'發表文章'}</span>
       </span>
     )
 

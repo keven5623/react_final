@@ -126,7 +126,7 @@ export default class Member extends Component {
     //蒐集數據
     const {user} = this.state 
     user.auth_time = Date.now();
-    user.auth_level = 2;
+    user.auth_level = 3;
     user.auth_status = '授權通過';
     // console.log(user)
     //請求更新
