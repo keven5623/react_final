@@ -32,21 +32,22 @@ export default class ArticleHome extends Component {
         dataIndex: 'name',
       },
       {
+        
         title: '文章作者',
         dataIndex: 'author',
       },
       {
-        width:300,
+        
         title: '發布日期',
         dataIndex: 'update',
       },
       {
-        width:300,
+        
         title: '文章發布人',
         dataIndex: 'username',
       },
       {
-        width: 250,
+        
         title: '操作',
         render: (article) => {
           const ifWatch = storageUtils.getWatch();
